@@ -70,7 +70,7 @@
       "oneClick": false,
       "warningsAsErrors": false,
       "allowToChangeInstallationDirectory": true,
-      "createDesktopShortcut": false,
+      "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "installerIcon": "resources/krypt.ico",
       "uninstallerIcon": "resources/krypt.ico",

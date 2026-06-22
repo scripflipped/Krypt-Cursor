@@ -10,7 +10,7 @@ export const DEFAULT_SETTINGS: Settings = {
   enabled: true,
   hideSystemCursor: false,
   systemCursorMatch: false,
-  startWithWindows: false,
+  startWithWindows: true,
   onboarded: false,
   kryptUsername: '',
   cursor: {

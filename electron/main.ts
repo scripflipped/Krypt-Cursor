@@ -55,7 +55,9 @@ function createMainWindow(): void {
     },
   });
   mainWindow.removeMenu();
-  mainWindow.once('ready-to-show', () => mainWindow?.show());
+  mainWindow.once('ready-to-show', () => {
+    if (!process.argv.includes('--hidden')) mainWindow?.show();
+  });
   mainWindow.on('closed', () => (mainWindow = null));
 
   if (DEV_URL) mainWindow.loadURL(DEV_URL);
@@ -283,7 +285,7 @@ function applyHotkey(accel: string): void {
 
 function applyLoginItem(open: boolean): void {
   try {
-    app.setLoginItemSettings({ openAtLogin: open });
+    app.setLoginItemSettings({ openAtLogin: open, args: ['--hidden'] });
   } catch {
   }
 }
